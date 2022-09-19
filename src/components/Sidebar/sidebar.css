@@ -1,0 +1,104 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  background-color: #181818;
+  width: 80px;
+  height: 100vh;
+  padding-bottom: 20px;
+}
+.logo {
+  display: block;
+  padding: 8px 0;
+}
+.Logo_svg {
+  display: block;
+  padding: 8px auto;
+  width: 50px;
+  margin: 0 auto;
+  height: auto;
+  stroke-width: 3px;
+}
+.Logo_svg:hover {
+  transform: rotateZ(90deg);
+}
+.text_logo {
+  animation: textanimate 8s infinite;
+  stroke-width: 3px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: 10px;
+  fill: rgb(24, 68, 97);
+  stroke: white;
+  stroke-width: 4;
+}
+
+.active>svg>path {
+fill: #cfb21b;
+}
+.svg1 {
+  fill: #cfb21b;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 3px;
+  stroke-dashoffset: 20%;
+}
+.svg2 {
+  fill: rgb(24, 68, 97);
+  stroke: rgb(255, 255, 255);
+}
+@keyframes textanimate {
+  0% {
+    stroke-dasharray: 0 50%;
+  }
+  90% {
+    stroke-dasharray: 50% 0;
+      fill: rgb(24, 68, 97);
+  }
+  100% {
+    fill: white;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav>A > SVG {
+  transition: all 0.3s ease-out;
+  margin-top: 50px;
+
+}
+nav>A > SVG:hover {
+  color: #ffd700;
+ 
+}
+
+.sidebar_linkes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ position: absolute;
+ bottom: 60px;
+  left: 37%;
+}
+.sidebar_linkes>a>svg{
+  margin-top: 10px;
+
+}
+.sidebar_linkes>a>svg:hover{
+  color: #cfb21b;
+
+}
+@media screen and (max-width: 768px) and (min-width: 200px) {
+  .nav-bar {
+  position: fixed;
+  top: 0;
+  background-color: #181818;
+  width: 80px;
+  min-height:100% ;
+  height: 100vh;
+  padding-bottom: 20px;
+}
+}

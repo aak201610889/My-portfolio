@@ -1,0 +1,32 @@
+.svc1 {
+  stroke: #cfb21b;
+  stroke-width: 3px;
+  animation: textanimate6 6s infinite;
+
+
+}
+
+.sv3 {
+  stroke: rgb(24, 68, 97);
+  stroke-width: 3px;
+  animation: textanimate5  6s  infinite;
+}
+@keyframes textanimate5 {
+  0% {
+    stroke-dasharray: 0 50%;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+     
+  }
+}
+@keyframes textanimate6 {
+  0% {
+    stroke-dasharray: 0 50%;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    
+     
+  }
+}

@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$primary-color:#ffd700;
+@import 'animate.css';
+@font-face {
+  font-family:'Helvatica';
+  src: url('./assets/fonts/Helv Children.otf') format('otf');
+}
+
+@font-face {
+  font-family:'Coolvetica';
+  src: url('./assets/fonts/coolvetica rg.otf') format('otf');
+}
+input,textarea,h1{
+  font-family: 'Helvatica';
+}
+.App{
+  position: relative;
+}
