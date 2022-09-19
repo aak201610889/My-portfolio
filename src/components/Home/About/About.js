@@ -8,7 +8,7 @@ function About() {
     { name: 'Html', level: 99 },
     { name: 'Css', level: 93 },
     { name: 'js', level: 84 },
-    { name: 'Bootstrap', level: 58 },
+    { name: 'Bootstrap', level: 55 },
     { name: 'React', level: 77 },
     { name: 'Redux', level: 65 }
 
