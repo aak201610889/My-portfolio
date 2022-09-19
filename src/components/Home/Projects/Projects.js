@@ -130,6 +130,7 @@ function Projects() {
       </Helmet>
       <h1>Projects</h1>
       <div className="row_select_proj">
+        
         <div>
           {" "}
           <button onClick={() => filter("all")}>All</button>
