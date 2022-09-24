@@ -1,10 +1,12 @@
 .nav-bar {
   position: fixed;
   top: 0;
+
+  bottom: 0;
   background-color: #181818;
   width: 80px;
-  height: 100vh;
-  padding-bottom: 20px;
+
+  padding-bottom: 0px;
 }
 .logo {
   display: block;
