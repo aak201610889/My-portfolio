@@ -23,7 +23,7 @@ const data = [
     type: "front",
     image: dataa1,
     link: "https://best-gamestore203040.netlify.app/",
-    name: "Store game",
+    name: "Store game (Front)",
   },
   // NEW
   {
@@ -93,13 +93,13 @@ const data = [
     type: "design",
     image: dataa9,
     link: "https://www.behance.net/gallery/141285029/gameoStore",
-    name: "Game Design",
+    name: "Store game (Design)",
   },
   {
     type: "back",
     image: dataa10,
-    link: "https://github.com/aak201610889/CRUD",
-    name: "CRUD BACKEND",
+    link: "https://github.com/aak201610889/game-server",
+    name: "Store game (Back)",
   },
   {
     type: "back",

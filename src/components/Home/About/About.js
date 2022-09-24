@@ -8,9 +8,10 @@ function About() {
     { name: 'Html', level: 99 },
     { name: 'Css', level: 93 },
     { name: 'js', level: 84 },
+    { name: 'React', level: 87 },
+    { name: 'Tailwind css', level: 85 },
     { name: 'Bootstrap', level: 58 },
-    { name: 'React', level: 77 },
-    { name: 'Redux', level: 65 }
+    { name: 'Redux', level: 65 },
 
   ]
   const dataBack = [
@@ -29,8 +30,6 @@ function About() {
     {name:'Color',level:73},
     {name:'Font',level:75},
     {name:'Effective',level:78},
-
-
   ]
   return (
     <div className="about">

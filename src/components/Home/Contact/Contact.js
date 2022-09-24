@@ -10,11 +10,10 @@ function Contact() {
 
     const sendEmail = (e) => {
       e.preventDefault();
-
       emailjs
         .sendForm(
-          "porti",
-          "template_njybv5o",
+          "portfolio",
+          "template_eemdixa",
           form.current,
           "swYjTI4sgYvsQGqYg"
         )
@@ -51,20 +50,20 @@ function Contact() {
             </div>
             <div>
               <FontAwesomeIcon icon={faPhone} color="#cfb21b" />
-              <p>+963-938889107</p>
+              <p>+963 938 889 107</p>
             </div>
           </div>
         </Fade>
-        <Fade right cascade>
+   
           <form className="contact_form" ref={form} onSubmit={sendEmail}>
             <h1>Message me</h1>
             <div>
               {" "}
-              <input type="text" placeholder="Name" name="user_name" />
+              <input type="text" required placeholder="Name" name="name" />
             </div>
             <div>
               {" "}
-              <input type="email" placeholder="Email" name="user_email" />
+              <input type="email" required placeholder="Email" name="email" />
             </div>
             <div>
               {" "}
@@ -74,7 +73,7 @@ function Contact() {
               <button type="submit">Send</button>
             </div>
           </form>
-        </Fade>
+       
       </div>
     </div>
   );
