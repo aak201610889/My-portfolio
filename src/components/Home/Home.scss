@@ -1,88 +1,76 @@
-.home{
-
+.home {
   margin-left: 80px;
-padding: 40px;
+  padding: 40px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-height: 100vh;
-width: 100vw -80px;
-
-
-
-
+  height: 100vh;
+  width: 100vw -80px;
+  overflow: hidden;
 }
 @font-face {
   font-family: lab;
-  src: url('../../assets/fonts/lab.ttf');
+  src: url("../../assets/fonts/lab.ttf");
 }
-.intoduce_me{
-  margin:1.2rem auto ;
-h1{color: rgb(255, 255, 255);
-padding: 10px 0px;
+.intoduce_me {
+  margin: 1.2rem auto;
+  h1 {
+    color: rgb(255, 255, 255);
+    padding: 10px 0px;
+  }
+  h1:hover {
+    color: #cfb21b;
+    animation: intoduce_me 2s;
+  }
 }
-h1:hover{
+
+.code {
   color: #cfb21b;
-  animation: intoduce_me 2s ;
+  font-family: "lab";
 }
-}
-
-
-
-.code{
-  color: #cfb21b;
-  font-family: 'lab';
-}
-.final_code{
+.final_code {
   margin-top: 40px;
 }
 
-.home_logo{
-
-width: 350px;
-height: 300px;
-padding-bottom: 10px;
-margin-right: 120px;
-padding-top: 40px;
-
+.home_logo {
+  width: 350px;
+  height: 300px;
+  padding-bottom: 10px;
+  margin-right: 120px;
+  padding-top: 40px;
 }
-.deves{
- 
+.deves {
   color: white;
 
   text-shadow: 2px 2px 3px #cfb21b;
   filter: drop-shadow(2px 2px 9px rgb(24, 68, 97));
-  
 }
 @media screen and (max-width: 768px) and (min-width: 200px) {
-  .home{
+  .home {
     width: 100vw -100px;
-    
- margin-left: 100px;
- padding-top: 25px;
- height: 100vh -50px;
 
- padding: 0px;
+    margin-left: 100px;
+    padding-top: 25px;
+    height: 100vh -50px;
+
+    padding: 0px;
   }
 
-  .intoduce_me{
-    margin:0.3rem auto ;
-    h1{
-padding:3px 0px;
-
-}
+  .intoduce_me {
+    margin: 0.3rem auto;
+    h1 {
+      padding: 3px 0px;
+    }
   }
-  .final_code{
+  .final_code {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .home_logo{
+  .home_logo {
     padding-top: 5px;
   }
-  .deves{
+  .deves {
     font-size: 2rem;
     margin-left: 0;
   }
-
-  
 }

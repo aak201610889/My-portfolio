@@ -1,31 +1,57 @@
-import './Contact.scss'
-import React, { useRef } from 'react'
+import './Contact.scss';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import emailjs from '@emailjs/browser'
 import { faEnvelope, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Fade } from 'react-reveal';
 import Helmet from 'react-helmet';
-function Contact() {
-    const form = useRef();
+import axios from 'axios';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-      emailjs
-        .sendForm(
-          "portfolio",
-          "template_eemdixa",
-          form.current,
-          "swYjTI4sgYvsQGqYg"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    };
+// Common toast configuration
+const toastConfig = {
+  position: "top-center",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+};
+function Contact() {
+  const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_DATAA;
+  const CHAT_ID = process.env.REACT_APP_CHAT_ID;
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const name = form.current.name.value;
+    const email = form.current.email.value;
+    const message = form.current.message.value;
+
+    const textMessage = `
+      📬 New Contact Form Submission:
+      👤 Name: ${name}
+      📧 Email: ${email}
+      💬 Message: ${message}
+    `;
+
+    try {
+      await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        chat_id: CHAT_ID,
+        text: textMessage,
+      });
+ 
+        toast.success("Message sent successfully!", toastConfig);
+      form.current.reset();
+    } catch (error) {
+      console.error("Error sending message:", error);
+       toast.error("Failed to send message.", toastConfig);
+ 
+    }
+  };
+
   return (
     <div className="contact">
       <Helmet>
@@ -42,7 +68,7 @@ function Contact() {
             <h2>Get In Touch</h2>
             <div>
               <FontAwesomeIcon icon={faUser} color="#cfb21b" />
-              <p>Ayham kattan</p>
+              <p>Ayham Kattan</p>
             </div>
             <div>
               <FontAwesomeIcon icon={faEnvelope} color="#cfb21b" />
@@ -54,29 +80,25 @@ function Contact() {
             </div>
           </div>
         </Fade>
-   
-          <form className="contact_form" ref={form} onSubmit={sendEmail}>
-            <h1>Message me</h1>
-            <div>
-              {" "}
-              <input type="text" required placeholder="Name" name="name" />
-            </div>
-            <div>
-              {" "}
-              <input type="email" required placeholder="Email" name="email" />
-            </div>
-            <div>
-              {" "}
-              <textarea name="message" placeholder="Message" />
-            </div>
-            <div className="send_button">
-              <button type="submit">Send</button>
-            </div>
-          </form>
-       
+
+        <form className="contact_form" ref={form} onSubmit={sendEmail}>
+          <h1>Message me</h1>
+          <div>
+            <input type="text" required placeholder="Name" name="name" />
+          </div>
+          <div>
+            <input type="email" required placeholder="Email" name="email" />
+          </div>
+          <div>
+            <textarea name="message" placeholder="Message" required />
+          </div>
+          <div className="send_button">
+            <button type="submit">Send</button>
+          </div>
+        </form>
       </div>
     </div>
   );
 }
 
-export default Contact
+export default Contact;

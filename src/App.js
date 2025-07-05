@@ -7,6 +7,9 @@ import Contact from './components/Home/Contact/Contact';
 import Home from './components/Home/Home';
 import Projects from './components/Home/Projects/Projects';
 import Layout from './components/Layout/Layout';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Don't forget to import the styles for Toastify
+
 function App() {
   return (
     <div className="App">
@@ -21,6 +24,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+         <ToastContainer />
     </div>
   );
 }

@@ -49,10 +49,14 @@ border: 2px solid rgb(24, 68, 97);
   border: 5px solid rgb(24, 68, 97);
   border-radius: 10px;
   position: relative;
+  
   margin-right: 10px;
 }
 .proj > a {
   text-decoration: none;
+ 
+  transform: translateY(50px);
+  transition: all 0.3s ease-in-out;
 }
 .proj_image {
   width: 100%;
@@ -61,7 +65,7 @@ border: 2px solid rgb(24, 68, 97);
     border-radius: 8px;
   object-fit: cover;
   position: relative;
-  background-color: #cfb21b;
+  background-color: rgb(24, 68, 97);
  filter: brightness(0.9);
  position: absolute;
 }

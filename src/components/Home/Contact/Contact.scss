@@ -46,7 +46,7 @@ margin-top: 50px;
 }
 .contact_form>div>input{
 background-color: rgb(255, 255, 255);
-border-radius: 50px;
+border-radius: 10px;
 width: 20rem;
 height: 3rem;
 padding-left: 1rem;
@@ -56,7 +56,7 @@ margin-bottom: 10px;
 }
 .contact_form>div>textarea{
 background-color: rgb(255, 255, 255);
-border-radius: 25px;
+border-radius: 10px;
 width: 20rem;
 height: 9rem;
 padding-left: 1rem;
@@ -76,7 +76,9 @@ justify-content: center;
 background-color:  #cfb21b;
 color: white;
 padding: 5px 15px;
-border-radius: 20px;
+border-radius: 5px;
+margin-top: 10px;
+width: 120px;
 font-size: 1rem;
 border: none;
 }

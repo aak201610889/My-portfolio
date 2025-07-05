@@ -16,10 +16,12 @@ function About() {
   ]
   const dataBack = [
    {name:'ExpressJs',level:74},
-    {name:'Nodejs',level:74},
-    {name:'Php',level:60},
-    {name:'Mongoose',level:70},
-    {name:'Sql',level:65},
+    {name:'Nodejs',level:80},
+    {name:'Docker',level:74},
+    {name:'Microservices',level:75},
+    {name:'Aws',level:60},
+    {name:'MVC',level:80},
+
    
 
   ]

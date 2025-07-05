@@ -75,7 +75,7 @@ import { faFacebook, faGithub, faLinkedin, faProductHunt } from '@fortawesome/fr
       <div className="sidebar_linkes">
         <a
           target="_blank"
-          href="https://www.linkedin.com/in/ayham-kattan-b0827a219/"
+          href="https://www.linkedin.com/in/ayhamkattan2024/"
         >
           <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
         </a>
