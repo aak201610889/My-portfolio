@@ -1,38 +1,50 @@
-import React, { useState } from 'react'
-import './projects.scss'
+import React, { useState } from "react";
+import "./projects.scss";
 import Fade from "react-reveal/Fade";
-import dataa1 from '../../../assets/images/proj1.JPG'
-import company from '../../../assets/images/company.png'
-import renew from '../../../assets/images/renew.png'
+import dataa1 from "../../../assets/images/proj1.JPG";
+import company from "../../../assets/images/company.png";
+import renew from "../../../assets/images/renew.png";
 
-import dataa13 from '../../../assets/images/proj13.PNG'
-import dataa14 from '../../../assets/images/proj14.PNG'
-import dataa15 from '../../../assets/images/proj15.PNG'
-import wed from '../../../assets/images/wed.png'
-import als from '../../../assets/images/als.png'
-import store from '../../../assets/images/store.png'
+import dataa13 from "../../../assets/images/proj13.PNG";
+import dataa14 from "../../../assets/images/proj14.PNG";
+import dataa15 from "../../../assets/images/proj15.PNG";
+import wed from "../../../assets/images/wed.png";
+import res from "../../../assets/images/rest.png";
+import als from "../../../assets/images/als.png";
+import store from "../../../assets/images/store.png";
 
-import Helmet from 'react-helmet';
-
+import Helmet from "react-helmet";
 
 const data = [
-   {
+  {
     type: "full",
     image: company,
     link: "https://companyv3.netlify.app/",
     name: "Company",
   },
-   {
+  {
     type: "full",
     image: store,
     link: "https://goldenstore2025.onrender.com/home",
     name: "Golden Store",
   },
-   {
+  {
+    type: "full",
+    image: res,
+    link: "https://resturantv3-2025.onrender.com/customerLogin/test",
+    name: "Resturant MenuA",
+  },
+  {
     type: "full",
     image: renew,
     link: "https://www.tamm.abudhabi/en/life-events/individual/Manage-your-Health/Health%20Insurance",
     name: "Renewal Health",
+  },
+  {
+    type: "https://als2025.netlify.app/",
+    image: dataa15,
+    link: "http://back.luxservice.co/",
+    name: "Platinum ",
   },
   {
     type: "front",
@@ -60,27 +72,22 @@ const data = [
     name: "Ray wedding",
   },
   {
-    type: "https://als2025.netlify.app/",
-    image: dataa15,
-    link: "http://back.luxservice.co/",
-    name: "Platinum ",
+    type: "front",
+    image: als,
+    link: "https://als2025.netlify.app/",
+    name: "ALS ",
   },
-
-
- 
-
-  
 ];
 
 function Projects() {
-  const [projects, setprojects] = useState(data)
+  const [projects, setprojects] = useState(data);
   const filter = (type) => {
     if (type === "all") {
-      setprojects(data)
+      setprojects(data);
     } else {
-      setprojects(data.filter((project) => project.type === type))
+      setprojects(data.filter((project) => project.type === type));
     }
-}
+  };
 
   return (
     <div className="projects">
@@ -98,7 +105,7 @@ function Projects() {
           <button onClick={() => filter("front")}>Front End</button>
           <button onClick={() => filter("full")}>Full Stack</button>
         </div>
-        
+
         <div>
           {" "}
           <button onClick={() => filter("all")}>All</button>
@@ -128,5 +135,4 @@ function Projects() {
   );
 }
 
-
-export default Projects
+export default Projects;

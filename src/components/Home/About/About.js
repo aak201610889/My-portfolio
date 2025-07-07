@@ -1,38 +1,34 @@
-import React from 'react'
-import './about.scss'
-import Leveles from './Leveles';
+import React from "react";
+import "./about.scss";
+import Leveles from "./Leveles";
 import Flip from "react-reveal/Flip";
-import Helmet from 'react-helmet';
+import Helmet from "react-helmet";
 function About() {
   const dataFront = [
-    { name: 'Html', level: 99 },
-    { name: 'Css', level: 93 },
-    { name: 'js', level: 84 },
-    { name: 'React', level: 87 },
-    { name: 'Tailwind css', level: 85 },
-    { name: 'Bootstrap', level: 58 },
-    { name: 'Redux', level: 65 },
-
-  ]
+    { name: "Html", level: 99 },
+    { name: "Css", level: 90 },
+    { name: "js", level: 84 },
+    { name: "React", level: 87 },
+    { name: "Tailwind css", level: 85 },
+    { name: "Redux Toolkit", level: 75 },
+    { name: "Socket IO", level: 72 },
+  ];
   const dataBack = [
-   {name:'ExpressJs',level:74},
-    {name:'Nodejs',level:80},
-    {name:'Docker',level:74},
-    {name:'Microservices',level:75},
-    {name:'Aws',level:60},
-    {name:'MVC',level:80},
-
-   
-
-  ]
+    { name: "ExpressJs", level: 74 },
+    { name: "Nodejs", level: 80 },
+    { name: "Docker", level: 74 },
+    { name: "Microservices", level: 75 },
+    { name: "Aws", level: 60 },
+    { name: "MVC", level: 80 },
+  ];
   const dataDesign = [
-   {name:'Research',level:90},
-    {name:'Design',level:80},
-    {name:'wireFrame',level:75},
-    {name:'Color',level:73},
-    {name:'Font',level:75},
-    {name:'Effective',level:78},
-  ]
+    { name: "Research", level: 90 },
+    { name: "Design", level: 80 },
+    { name: "wireFrame", level: 75 },
+    { name: "Color", level: 73 },
+    { name: "Font", level: 75 },
+    { name: "Effective", level: 78 },
+  ];
   return (
     <div className="about">
       <Helmet>
@@ -78,4 +74,4 @@ function About() {
   );
 }
 
-export default About
+export default About;
